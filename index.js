@@ -6,6 +6,22 @@ const { storagePaths } = require("./src/config/storage.config");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+
+// // CORS configuration: Allow only sovefi.com and its subdomains
+// const corsOptions = {
+//   origin: (origin, callback) => {
+//     if (!origin || origin.includes('sovefi.com')) {
+//       callback(null, true);
+//     } else {
+//       callback(new Error("Not allowed by CORS"));
+//     }
+//   }
+// };
+
+// // Middleware
+// app.use(cors(corsOptions));
+
+
 // Middleware
 app.use(cors());
 app.use(express.json());
